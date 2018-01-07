@@ -1,0 +1,38 @@
+
+class B{
+	void method(){
+		System.out.println("method b");
+	}
+}
+class D extends B{
+	void method()
+	{
+		System.out.println("methpd d");
+	}
+	void method1(){
+		System.out.println("method 1");
+	}
+	void method(int x)
+	{
+		System.out.println("method overload");
+	}
+}
+
+public class Casting {
+
+	public static void main(String[] args) {
+		B obj[]={new B(),new D()};
+		for(B o :obj){
+			o.method();
+			if(o instanceof D){
+				System.out.println("instance of D");
+				((D) o).method1();
+				
+				
+			}
+		}
+		
+
+	}
+
+}
